@@ -6,3 +6,4 @@ Titles:
 - Lecture 3: Operators and Control Flow I
 - Lecture 4: Operators and Control Flow II, Functions
 - Lecture 5: Variables II, Pointers and Arrays I
+- Lecture 6: Pointers and Arrays II
