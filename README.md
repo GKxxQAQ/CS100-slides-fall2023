@@ -7,4 +7,4 @@ Titles:
 - Lecture 4: Operators and Control Flow II, Functions
 - Lecture 5: Variables II, Pointers and Arrays I
 - Lecture 6: Pointers and Arrays II
-- Lecture 7: Pointers and Arrays III, Dynamic memory I, Strings I
+- Lecture 7: Pointers and Arrays III, Dynamic memory, Strings
