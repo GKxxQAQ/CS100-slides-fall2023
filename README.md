@@ -10,3 +10,4 @@ Titles:
 - Lecture 7: Pointers and Arrays III, Dynamic Memory, Strings
 - Lecture 8: Dynamic Memory and Strings Revisited
 - Lecture 9: Struct, recursion
+- Lecture 10: C Summary

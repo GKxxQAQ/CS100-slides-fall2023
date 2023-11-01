@@ -46,7 +46,7 @@ struct Vector vector_minus(const struct Vector *lhs, const struct Vector *rhs) {
   assert(lhs->dimension == rhs->dimension);
   struct Vector result = create_vector(lhs->dimension);
   for (size_t i = 0; i != lhs->dimension; ++i)
-    result.entries[i] = lhs->entries[i] + rhs->entries[i];
+    result.entries[i] = lhs->entries[i] - rhs->entries[i];
   return result;
 }
 
