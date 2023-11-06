@@ -11,3 +11,4 @@ Titles:
 - Lecture 8: Dynamic Memory and Strings Revisited
 - Lecture 9: Struct, recursion
 - Lecture 10: C Summary
+- Lecture 11: C++ Introduction, Strings
