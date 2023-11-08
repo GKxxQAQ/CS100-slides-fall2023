@@ -12,3 +12,4 @@ Titles:
 - Lecture 9: Struct, recursion
 - Lecture 10: C Summary
 - Lecture 11: C++ Introduction, Strings
+- Lecture 12: References, std::vector
