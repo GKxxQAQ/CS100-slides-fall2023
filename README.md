@@ -14,3 +14,4 @@ Titles:
 - Lecture 11: C++ Introduction, Strings
 - Lecture 12: References, std::vector
 - Lecture 13: "C" in C++
+- Lecture 14: Classes
