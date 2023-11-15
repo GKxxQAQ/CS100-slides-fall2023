@@ -1,11 +1,11 @@
 受限于页面大小， slides 中的代码格式（缩进、换行、空格等）可能会比较怪异，不要学习这些代码格式。
 
-P7 C++ 中的 struct 并不是只有 C 的 struct 那些功能。事实上， C++ 的 struct 和 class 的能力范围是一样的，仅有两个区别：
+P6 C++ 中的 struct 并不是只有 C 的 struct 那些功能。事实上， C++ 的 struct 和 class 的能力范围是一样的，仅有两个区别：
 - 默认的成员访问权限， class 是 private ， struct 是 public 。
 - 默认的继承访问权限， class 是 private ， struct 是 public 。
 这里我们还未讲到继承。除了这两点之外，它们没有任何区别，能用 class 完成的事情 struct 都能完成。
 
-P8 这个 slides 里的所有 member 都是 non-static member 。事实上“Every member belongs to an object”只对 non-static member 成立，包括后面提到的 this 指针也只在 non-static member 里存在。 non-static member 和 static member 类似于 Python 里的 instance method 和 class method 。
+P5 这个 slides 里的所有 member 都是 non-static member 。事实上“Every member belongs to an object”只对 non-static member 成立，包括后面提到的 this 指针也只在 non-static member 里存在。 non-static member 和 static member 类似于 Python 里的 instance method 和 class method 。
 
 P11 在汇编层面上，左边的代码真的就是像右边这样处理的，隐式的 `this` 参数会成为这个函数的第一个参数。历史上的第一个 C++ 编译器叫做 Cfront ，由 Bjarne Stroustrup 于 1983 年完成。它之所以叫做 Cfront ，是因为它就是将当时的 C++ 代码翻译成 C 代码，然后调用 C 编译器来编译。 Cfront 对于成员函数的处理方式就是像这一页展示的这样，将成员函数翻译成普通函数，将隐式的 `this` 参数显式地写出来，并把所有成员函数调用 `a.mem(args)` 都翻译成 `mem(&a, args)` 。我可能会在习题课上展示一个基于 Clang 写的小工具，模仿当年的 Cfront 生成翻译后的代码。
 
