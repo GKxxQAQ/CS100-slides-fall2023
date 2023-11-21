@@ -14,5 +14,6 @@ Titles:
 - Lecture 11: C++ Introduction, Strings
 - Lecture 12: References, std::vector
 - Lecture 13: "C" in C++
-- Lecture 14: Classes
+- Lecture 14: Class Basics I
 - Lecture 15: Constructors, Destructors, Copy Control
+- Lecture 16: Class Basics II
