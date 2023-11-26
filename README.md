@@ -17,3 +17,4 @@ Titles:
 - Lecture 14: Class Basics I
 - Lecture 15: Constructors, Destructors, Copy Control
 - Lecture 16: Class Basics II
+- Lecture 17: Rvalue References and Move
