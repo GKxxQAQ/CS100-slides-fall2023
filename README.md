@@ -20,3 +20,4 @@ Titles:
 - Lecture 17: Rvalue References and Move
 - Lecture 18: Smart Pointers
 - Lecture 19: Operator Overloading
+- Lecture 20: Iterators and Algorithms
