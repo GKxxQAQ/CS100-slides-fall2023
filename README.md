@@ -22,3 +22,4 @@ Titles:
 - Lecture 19: Operator Overloading
 - Lecture 20: Iterators and Algorithms
 - Lecture 21: Inheritance and Polymorphism I
+- Lecture 22: Inheritance and Polymorphism II
