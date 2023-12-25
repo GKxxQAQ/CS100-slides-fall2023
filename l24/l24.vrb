@@ -9,6 +9,6 @@ Since C++11, a reasonable optimization is to \textbf{move} elements, instead of 
 
   Due to this consideration, \ilcpp{std::vector<T>} uses the move operation of \ilcpp{T} \textbf{only when it is \ilcpp{noexcept}}.
   \begin{cpp}
-    for (auto p = m_storage; p != m_end_of_elem; ++p)
-      construct_object_at(q++, @\redtt{std::move\_if\_noexcept(*p)}@);
+    for (auto old_data = m_storage; old_data != m_end_of_elem; ++old_data)
+      construct_object_at(p++, @\redtt{std::move\_if\_noexcept(*old\_data)}@);
   \end{cpp}

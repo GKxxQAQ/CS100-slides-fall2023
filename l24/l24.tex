@@ -609,7 +609,8 @@ int add(int a, int b) throw() {
       void push_back(const T &x) {
         if (size() == capacity())
           reallocate(capacity() == 0 ? 1 : capacity() * 2);
-        *m_end_of_elem++ = x;
+        construct_object_at(m_end_of_elem, x);
+        ++m_end_of_elem;
       }
     private:
       void reallocate(std::size_t new_capacity);
@@ -626,12 +627,12 @@ int add(int a, int b) throw() {
     template <typename T>
     class vector {
       void reallocate(std::size_t new_capacity) {
-        auto new_storage = allocate_memory(new_capacity), q = new_storage;
-        for (auto p = m_storage; p != m_end_of_elem; ++p)
-          construct_object_at(q++, *p);
+        auto new_storage = allocate_memory(new_capacity), p = new_storage;
+        for (auto old_data = m_storage; old_data != m_end_of_elem; ++old_data)
+          construct_object_at(p++, *old_data);
         destroy_and_deallocate(m_storage);
         m_storage = new_storage;
-        m_end_of_elem = q;
+        m_end_of_elem = p;
         m_end_of_storage = m_storage + new_capacity;
       }
     };
@@ -644,16 +645,16 @@ int add(int a, int b) throw() {
     template <typename T>
     class vector {
       void reallocate(std::size_t new_capacity) {
-        auto new_storage = allocate_memory(new_capacity), q = new_storage;
+        auto new_storage = allocate_memory(new_capacity), p = new_storage;
         @\redtt{try \{}@
-          for (auto p = m_storage; p != m_end_of_elem; ++p)
-            construct_object_at(q++, *p);
+          for (auto old_data = m_storage; old_data != m_end_of_elem; ++old_data)
+            construct_object_at(p++, *old_data);
         @\redtt{\} catch (...) \{}@
-          @\redtt{while (q != new\_storage) destroy(--q);}@
+          @\redtt{while (p != new\_storage) destroy(--p);}@
           @\redtt{deallocate(new\_storage); throw;}@
         @\redtt{\}}@
         destroy_and_deallocate(m_storage);
-        m_storage = new_storage; m_end_of_elem = q; m_end_of_storage = m_storage + new_capacity;
+        m_storage = new_storage; m_end_of_elem = p; m_end_of_storage = m_storage + new_capacity;
       }
     };
   \end{cpp}
@@ -665,10 +666,10 @@ int add(int a, int b) throw() {
     template <typename T>
     class vector {
       void reallocate(std::size_t new_capacity) {
-        auto new_storage = allocate_memory(new_capacity), q = new_storage;
+        auto new_storage = allocate_memory(new_capacity), p = new_storage;
         try {
-          for (auto p = m_storage; p != m_end_of_elem; ++p)
-            construct_object_at(q++, @\redtt{std::move(*p)}@);
+          for (auto old_data = m_storage; old_data != m_end_of_elem; ++old_data)
+            construct_object_at(p++, @\redtt{std::move(*old\_data)}@);
         } catch (...) {
           // Wait ... The elements are moved! How can we recover them?
         }
@@ -689,8 +690,8 @@ int add(int a, int b) throw() {
 
   Due to this consideration, \ilcpp{std::vector<T>} uses the move operation of \ilcpp{T} \textbf{only when it is \ilcpp{noexcept}}.
   \begin{cpp}
-    for (auto p = m_storage; p != m_end_of_elem; ++p)
-      construct_object_at(q++, @\redtt{std::move\_if\_noexcept(*p)}@);
+    for (auto old_data = m_storage; old_data != m_end_of_elem; ++old_data)
+      construct_object_at(p++, @\redtt{std::move\_if\_noexcept(*old\_data)}@);
   \end{cpp}
 \end{frame}
 
