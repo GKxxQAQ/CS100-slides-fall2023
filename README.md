@@ -23,4 +23,5 @@ Titles:
 - Lecture 20: Iterators and Algorithms
 - Lecture 21: Inheritance and Polymorphism I
 - Lecture 22: Inheritance and Polymorphism II
-- Lecture 23: More on STL: Sequence containers and associative containers
+- Lecture 23: More on STL: Sequence Containers and Associative Containers
+- Lecture 24: Exception Handling and Exception Safety
