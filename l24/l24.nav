@@ -103,8 +103,10 @@
 \headcommand {\beamer@framepages {72}{72}}
 \headcommand {\slideentry {3}{2}{12}{73/73}{Exception specification}{0}}
 \headcommand {\beamer@framepages {73}{73}}
-\headcommand {\beamer@partpages {1}{73}}
-\headcommand {\beamer@subsectionpages {60}{73}}
-\headcommand {\beamer@sectionpages {48}{73}}
-\headcommand {\beamer@documentpages {73}}
-\headcommand {\gdef \inserttotalframenumber {44}}
+\headcommand {\slideentry {3}{2}{13}{74/74}{Exception specification}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\beamer@partpages {1}{74}}
+\headcommand {\beamer@subsectionpages {60}{74}}
+\headcommand {\beamer@sectionpages {48}{74}}
+\headcommand {\beamer@documentpages {74}}
+\headcommand {\gdef \inserttotalframenumber {45}}
