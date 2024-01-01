@@ -26,3 +26,4 @@ Titles:
 - Lecture 23: More on STL: Sequence Containers and Associative Containers
 - Lecture 24: Exception Handling and Exception Safety
 - Lecture 25: Templates I
+- Lecture 26: Templates II
