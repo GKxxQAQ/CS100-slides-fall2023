@@ -28,3 +28,4 @@ Titles:
 - Lecture 25: Templates I
 - Lecture 26: Templates II
 - Lecture 27: Other Facilities in the Standard Library
+- Lecture 28: Compile-time Computations and Metaprogramming
